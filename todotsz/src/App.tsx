@@ -11,8 +11,7 @@ const App: React.FC = (): JSX.Element => {
   const deleteTodo = useStore(state => state.deleteTodo);
   const editTodo = useStore(state => state.editTodo);
 
-  // Add or update a todo
-  const handleAddOrUpdate = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleAddOrUpdate = () => {
     if (editIndex !== null) {
       // If editing, update the todo
       editTodo(editIndex, todo);
